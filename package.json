@@ -8,10 +8,10 @@
   "main": "lib/netki",
   "repository": {
     "type": "git",
-    "url": "https://github.com/{thing}"
+    "url": "https://github.com/netkicorp/node-partner-client"
   },
   "bugs": {
-    "url": "https://github.com/{thing}/issues"
+    "url": "https://github.com/netkicorp/node-partner-client/issues"
   },
   "keywords": [
     "netki",
