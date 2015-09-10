@@ -1,0 +1,39 @@
+{
+  "name": "netki-partner-client",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "description": "Netki NodeJS partner client",
+  "main": "lib/netki",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/{thing}"
+  },
+  "bugs": {
+    "url": "https://github.com/{thing}/issues"
+  },
+  "keywords": [
+    "netki",
+    "partner",
+    "wallet",
+    "walletname"
+  ],
+  "scripts": {
+    "test": "mocha ./test/index.spec.js"
+  },
+  "author": "Netki Opensource <opensource@netki.com> (https://www.netki.com/)",
+  "license": "BSD3",
+  "dependencies": {
+    "q": "^1.4.1",
+    "request": "^2.60.0"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5",
+    "nock": "^2.9.1",
+    "rewire": "^2.3.4",
+    "sinon": "^1.16.1",
+    "sinon-chai": "^2.8.0"
+  }
+}
