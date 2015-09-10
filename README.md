@@ -4,17 +4,20 @@ This NodeJS module provides a client for [Netki's](https://netki.com) Partner AP
 
 ## Installation
 
-Download and add the netki directory to your project.
+Install the Netki Partner API Client using npm as follows:
+
+``` npm install netki-partner-client
+```
 
 Add this line to your application import:
 
-``` netki = require('netki');
+``` var netki = require('netki-partner-client');
 ```
 
 ## Usage
 
-See funcTest.js in the /spec folder for more information
+See example.js in the /examples folder for more information
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/netkicorp/{{URL}}.
+Bug reports and pull requests are welcome on GitHub at https://github.com/netkicorp/node-partner-client.
