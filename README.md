@@ -6,12 +6,14 @@ This NodeJS module provides a client for [Netki's](https://netki.com) Partner AP
 
 Install the Netki Partner API Client using npm as follows:
 
-``` npm install netki-partner-client
+``` 
+npm install netki-partner-client
 ```
 
 Add this line to your application import:
 
-``` var netki = require('netki-partner-client');
+``` 
+var netki = require('netki-partner-client');
 ```
 
 ## Usage
