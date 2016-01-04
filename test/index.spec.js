@@ -570,12 +570,12 @@ describe('Netki Partner Client Tests', function () {
 
       it('tests fetching Wallet Names with the externalId argument: Go right', function (done) {
 
-        nClient.getWalletNames(null, 'myExtID').then(function (retVal) {
+        nClient.getWalletNames(null, 'my+ExtID').then(function (retVal) {
 
           expect(prSpy).to.have.been.calledWithExactly(
             partnerID,
             apiKey,
-            apiURL + '/v1/partner/walletname?external_id=myExtID',
+            apiURL + '/v1/partner/walletname?external_id=my%2BExtID',
             'GET'
           );
 
