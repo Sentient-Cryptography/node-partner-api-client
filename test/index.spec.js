@@ -649,6 +649,38 @@ describe('Netki Partner Client Tests', function () {
 
     });
 
+    describe('netkiClient lookupWalletName tests', function () {
+      var nClient,
+        prSpy;
+
+      beforeEach(function () {
+        nClient = new netki.netkiClient(apiKey, partnerID, apiURL);
+
+        // TODO: Look into getting this function and spying on it or doing whatever vs. replace.
+        var thing = netki.__get__('processRequest');
+
+        prSpy = sinon.stub(netki, '_processRequest').returns(
+          Q.Promise(function (resolve) {
+            return resolve('apiData')
+          })
+        );
+
+        netki.__set__('processRequest', prSpy);
+
+      });
+
+      afterEach(function () {
+        netki._processRequest.restore();
+      });
+
+      it('looks up a Wallet Name', function () {
+        nClient.lookupWalletName('wallet.BruceWayne.rocks', 'btc').then(function(retVal) {
+          expect(retVal).to.equal('apiData');
+        });
+
+      })
+    })
+
   });
 
 });
