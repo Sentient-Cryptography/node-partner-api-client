@@ -100,19 +100,6 @@ describe('Netki Partner Client Tests', function () {
         });
     });
 
-    it('Tests invalid content-type headers', function (done) {
-
-      setupHTTPMock('GET', 200, responseData, {'content-type': 'text/plain'});
-
-      netki._processRequest(partner_id, api_key, uri, 'GET')
-        .fail(function (error) {
-          expect(error).to.equal('HTTP Response Contains Invalid Content-Type: text/plain')
-        })
-        .done(function () {
-          done()
-        });
-    });
-
     it('Tests an exception parsing JSON response', function (done) {
 
       setupHTTPMock('GET', 200, 'not json');
