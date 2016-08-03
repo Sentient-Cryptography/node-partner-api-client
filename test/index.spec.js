@@ -9,7 +9,8 @@ var rewire = require('rewire'),
   sinonChai = require('sinon-chai'),
   expect = chai.expect,
   nock = require('nock'),
-  Q = require('q');
+  Q = require('q'),
+  version = require('../package').version;
 
 chai.use(sinonChai);
 
@@ -34,6 +35,7 @@ describe('Netki Partner Client Tests', function () {
       nock('http://localhost:5000')
         .intercept('/v1/partner/walletname', method)
         .matchHeader('content-type', 'application/json')
+        .matchHeader('user-agent', 'Netki-NodeJS/' + version)
         .reply(statusCode, responseData, headers);
     };
 
