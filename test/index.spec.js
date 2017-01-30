@@ -108,7 +108,7 @@ describe('Netki Partner Client Tests', function () {
 
       netki._processRequest(partner_id, api_key, uri, 'GET')
         .fail(function (error) {
-          expect(error).to.equal('Error Parsing JSON Data: SyntaxError: Unexpected token o')
+          expect(error).to.match(/^Error Parsing JSON Data: SyntaxError: Unexpected token o/)
         })
         .done(function () {
           done()
