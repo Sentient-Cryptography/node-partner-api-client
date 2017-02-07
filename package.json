@@ -1,6 +1,6 @@
 {
   "name": "netki-partner-client",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "engines": {
     "node": ">=0.8.0"
   },
@@ -23,8 +23,9 @@
     "test": "mocha ./test/index.spec.js"
   },
   "author": "Netki Opensource <opensource@netki.com> (https://www.netki.com/)",
-  "license": "BSD3",
+  "license": "BSD-3-Clause",
   "dependencies": {
+    "jsrsasign": "^7.1.0",
     "q": "^1.4.1",
     "request": "^2.60.0"
   },
